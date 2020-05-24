@@ -1,3 +1,4 @@
+import 'package:Classign/screens/signup_screen.dart';
 import 'package:flutter/material.dart';
 import 'screens/welcome_screen.dart';
 import 'screens/constants.dart';
@@ -12,6 +13,7 @@ void main() {
     routes: {
       WelcomeScreen.id : (context) => WelcomeScreen(),
       LoginScreen.id   : (context) => LoginScreen(),
+      SignUpScreen.id  : (context) => SignUpScreen(),
     },
 
     ) 

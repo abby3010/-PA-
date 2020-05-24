@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:wave/wave.dart';
 import 'package:wave/config.dart';
 
-class LoginScreen extends StatefulWidget {
-  static const String id = "login_screen";
+class SignUpScreen extends StatefulWidget {
+  static const String id = "signup_screen";
 
   @override
-  _LoginScreenState createState() => _LoginScreenState();
+  _SignUpScreenState createState() => _SignUpScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _SignUpScreenState extends State<SignUpScreen> {
   _buildCard({Config config, Color backgroundColor = Colors.transparent}) {
     return Center(
       child: Container(
@@ -47,10 +47,10 @@ class _LoginScreenState extends State<LoginScreen> {
             _buildCard(
               config: CustomConfig(
                 colors: [
-                  Colors.pink[400],
-                  Colors.pink[300],
-                  Colors.pink[100],
-                  Colors.pink[50]
+                  Colors.purple[400],
+                  Colors.purple[300],
+                  Colors.purple[100],
+                  Colors.purple[50]
                 ],
                 durations: [25000, 19440, 10800, 6000],
                 heightPercentages: [0.20, 0.23, 0.25, 0.30],
@@ -71,7 +71,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: 30.0,
                 ),
                 Text(
-                  'Log In',
+                  'Sign Up',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontFamily: 'BalsamiqSans',
@@ -107,12 +107,12 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       enabledBorder: OutlineInputBorder(
                         borderSide:
-                            BorderSide(color: Colors.purple, width: 1.5),
+                            BorderSide(color: Color(0xFFa5025b), width: 1.5),
                         borderRadius: BorderRadius.all(Radius.circular(32.0)),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderSide:
-                            BorderSide(color: Colors.purple, width: 2.0),
+                            BorderSide(color: Color(0xFFa5025b), width: 2.0),
                         borderRadius: BorderRadius.all(Radius.circular(32.0)),
                       ),
                     ),
@@ -127,7 +127,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     right: 25.0,
                   ),
                   child: TextField(
-                    obscureText: true,
+                    keyboardType: TextInputType.text,
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 17.0,
@@ -136,8 +136,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       //Do something with the user input.
                     },
                     decoration: InputDecoration(
-                      labelText: "Password",
-                      hintText: 'VJTI@ClAssign',
+                      labelText: "Name",
+                      hintText: 'Waghmare Ganpat Dhondiba',
                       contentPadding: EdgeInsets.symmetric(
                           vertical: 10.0, horizontal: 20.0),
                       border: OutlineInputBorder(
@@ -145,12 +145,88 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       enabledBorder: OutlineInputBorder(
                         borderSide:
-                            BorderSide(color: Colors.purple, width: 1.5),
+                            BorderSide(color: Color(0xFFa5025b), width: 1.5),
                         borderRadius: BorderRadius.all(Radius.circular(32.0)),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderSide:
-                            BorderSide(color: Colors.purple, width: 2.0),
+                            BorderSide(color: Color(0xFFa5025b), width: 2.0),
+                        borderRadius: BorderRadius.all(Radius.circular(32.0)),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 15.0,
+                ),
+                Padding(
+                  padding: EdgeInsets.only(
+                    left: 25.0,
+                    right: 25.0,
+                  ),
+                  child: TextField(
+                    keyboardType: TextInputType.phone,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 17.0,
+                    ),
+                    onChanged: (value) {
+                      //Do something with the user input.
+                    },
+                    decoration: InputDecoration(
+                      labelText: "Phone Number",
+                      hintText: '9876543210',
+                      contentPadding: EdgeInsets.symmetric(
+                          vertical: 10.0, horizontal: 20.0),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(32.0)),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide:
+                            BorderSide(color: Color(0xFFa5025b), width: 1.5),
+                        borderRadius: BorderRadius.all(Radius.circular(32.0)),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide:
+                            BorderSide(color: Color(0xFFa5025b), width: 2.0),
+                        borderRadius: BorderRadius.all(Radius.circular(32.0)),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 15.0,
+                ),
+                Padding(
+                  padding: EdgeInsets.only(
+                    left: 25.0,
+                    right: 25.0,
+                  ),
+                  child: TextField(
+                    keyboardType: TextInputType.emailAddress,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 17.0,
+                    ),
+                    onChanged: (value) {
+                      //Do something with the user input.
+                    },
+                    decoration: InputDecoration(
+                      labelText: "Email ID",
+                      hintText: 'classign@example.com',
+                      contentPadding: EdgeInsets.symmetric(
+                          vertical: 10.0, horizontal: 20.0),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(32.0)),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide:
+                            BorderSide(color: Color(0xFFa5025b), width: 1.5),
+                        borderRadius: BorderRadius.all(Radius.circular(32.0)),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide:
+                            BorderSide(color: Color(0xFFa5025b), width: 2.0),
                         borderRadius: BorderRadius.all(Radius.circular(32.0)),
                       ),
                     ),
@@ -162,11 +238,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: 50.0,
                   child: RaisedButton(
                       onPressed: () {
-                        Navigator.pushNamed(context, LoginScreen.id);
+                        Navigator.pushNamed(context, SignUpScreen.id);
                       },
                       elevation: 10.0,
                       child: Text(
-                        "Login",
+                        "Sign Up",
                         style: TextStyle(color: Colors.white, fontSize: 20.0),
                       ),
                       color: Colors.blue[700],
