@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:wave/config.dart';
 import 'package:wave/wave.dart';
+import 'package:wave/config.dart';
 
 class LoginScreen extends StatefulWidget {
-  LoginScreen({Key key, this.title}) : super(key: key);
-
   static const String id = "login_screen";
-
-  final String title;
 
   @override
   _LoginScreenState createState() => _LoginScreenState();
@@ -17,7 +13,7 @@ class _LoginScreenState extends State<LoginScreen> {
   _buildCard({Config config, Color backgroundColor = Colors.transparent}) {
     return Center(
       child: Container(
-        height: 500.0,
+        // height: 500.0,
         width: double.infinity,
         child: Card(
           elevation: 12.0,
@@ -37,88 +33,149 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   MaskFilter _blur;
-  final List<MaskFilter> _blurs = [
-    null,
-    MaskFilter.blur(BlurStyle.normal, 10.0),
-    MaskFilter.blur(BlurStyle.inner, 10.0),
-    MaskFilter.blur(BlurStyle.outer, 10.0),
-    MaskFilter.blur(BlurStyle.solid, 16.0),
-  ];
-  int _blurIndex = 0;
-  MaskFilter _nextBlur() {
-    if (_blurIndex == _blurs.length - 1) {
-      _blurIndex = 0;
-    } else {
-      _blurIndex = _blurIndex + 1;
-    }
-    _blur = _blurs[_blurIndex];
-    return _blurs[_blurIndex];
-  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-        elevation: 10.0,
-        backgroundColor: Colors.blueGrey[800],
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(_blur == null ? Icons.blur_off : Icons.blur_on),
-            onPressed: () {
-              setState(() {
-                _blur = _nextBlur();
-              });
-            },
-          )
-        ],
-      ),
-      body: Center(
-        child: ListView(
+      backgroundColor: Color(0xFFE6E2E1),
+      resizeToAvoidBottomInset: false,
+      body: Padding(
+        padding: EdgeInsets.only(top: 30.0, left: 6.0, right: 6.0, bottom: 6.0),
+        child: Stack(
           children: <Widget>[
-            SizedBox(height: 16.0),
+            // SizedBox(height: 8.0),
             _buildCard(
               config: CustomConfig(
-                gradients: [
-                  [Colors.red, Color(0xEEF44336)],
-                  [Colors.red[800], Color(0x77E57373)],
-                  [Colors.orange, Color(0x66FF9800)],
-                  [Colors.yellow, Color(0x55FFEB3B)]
+                colors: [
+                  Colors.pink[400],
+                  Colors.pink[300],
+                  Colors.pink[200],
+                  Colors.pink[100]
                 ],
-                durations: [35000, 19440, 10800, 6000],
+                durations: [25000, 19440, 10800, 6000],
                 heightPercentages: [0.20, 0.23, 0.25, 0.30],
                 blur: _blur,
-                gradientBegin: Alignment.bottomLeft,
-                gradientEnd: Alignment.topRight,
               ),
             ),
-            // _buildCard(
-            //   config: CustomConfig(
-            //     colors: [
-            //       Colors.pink[400],
-            //       Colors.pink[300],
-            //       Colors.pink[200],
-            //       Colors.pink[100]
-            //     ],
-            //     durations: [25000, 19440, 10800, 6000],
-            //     heightPercentages: [0.20, 0.23, 0.25, 0.30],
-            //     blur: _blur,
-            //   ),
-            // ),
-            // _buildCard(
-            //   config: CustomConfig(
-            //     colors: [
-            //       Colors.white70,
-            //       Colors.white54,
-            //       Colors.white30,
-            //       Colors.white24,
-            //     ],
-            //     durations: [32000, 21000, 18000, 5000],
-            //     heightPercentages: [0.25, 0.26, 0.28, 0.31],
-            //     blur: _blur,
-            //   ),
-            //   backgroundColor: Colors.blue[600]
-            // ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Image.asset(
+                  'images/114.png',
+                  height: 65.0,
+                ),
+                SizedBox(
+                  height: 30.0,
+                ),
+                Text(
+                  'Log In',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontFamily: 'BalsamiqSans',
+                    fontWeight: FontWeight.w700,
+                    fontStyle: FontStyle.italic,
+                    fontSize: 60.0,
+                  ),
+                ),
+                SizedBox(
+                  height: 50.0,
+                ),
+                Padding(
+                  padding: EdgeInsets.only(
+                    left: 25.0,
+                    right: 25.0,
+                  ),
+                  child: TextField(
+                    keyboardType: TextInputType.number,
+                    textAlign: TextAlign.center,
+                    onChanged: (value) {
+                      //Do something with the user input.
+                    },
+                    style: TextStyle(
+                      fontSize: 17.0,
+                    ),
+                    decoration: InputDecoration(
+                      labelText: 'ID No',
+                      hintText: '191071076',
+                      contentPadding: EdgeInsets.symmetric(
+                          vertical: 10.0, horizontal: 20.0),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(32.0)),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide:
+                            BorderSide(color: Colors.purple, width: 1.5),
+                        borderRadius: BorderRadius.all(Radius.circular(32.0)),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide:
+                            BorderSide(color: Colors.purple, width: 2.0),
+                        borderRadius: BorderRadius.all(Radius.circular(32.0)),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 15.0,
+                ),
+                Padding(
+                  padding: EdgeInsets.only(
+                    left: 25.0,
+                    right: 25.0,
+                  ),
+                  
+                  child: TextField(
+                    obscureText: true,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 17.0,
+                    ),
+                    onChanged: (value) {
+                      //Do something with the user input.
+                    },
+                    
+                    decoration: InputDecoration(
+                      
+                      labelText: "Password",
+                      hintText: 'VJTI@ClAssign',
+                      contentPadding: EdgeInsets.symmetric(
+                          vertical: 10.0, horizontal: 20.0),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(32.0)),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide:
+                            BorderSide(color: Colors.purple, width: 1.5),
+                        borderRadius: BorderRadius.all(Radius.circular(32.0)),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide:
+                            BorderSide(color: Colors.purple, width: 2.0),
+                        borderRadius: BorderRadius.all(Radius.circular(32.0)),
+                      ),
+                    ),
+                  ),
+                ),
+              
+              SizedBox(height:40.0),
+
+           ButtonTheme(
+            minWidth: 150.0,
+            height: 50.0,
+            child: RaisedButton(
+                onPressed: (){
+                  Navigator.pushNamed(context, LoginScreen.id );
+                },
+                elevation: 10.0,
+                child: Text("Login" , style:TextStyle(color: Colors.white , fontSize: 20.0) ,),
+                color: Colors.blue[700],
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0))
+                ),
+            ),
+              
+              
+              ],
+            )
           ],
         ),
       ),
