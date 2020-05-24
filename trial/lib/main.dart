@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trial/constants.dart';
 import 'package:trial/screens/login_screen.dart';
 import 'package:trial/wave_trial.dart';
 
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'For Constants',
       home: LoginScreen(),
+      theme: defaultTheme,
     );
   }
 }
