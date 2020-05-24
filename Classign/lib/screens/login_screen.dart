@@ -123,7 +123,6 @@ class _LoginScreenState extends State<LoginScreen> {
                     left: 25.0,
                     right: 25.0,
                   ),
-                  
                   child: TextField(
                     obscureText: true,
                     textAlign: TextAlign.center,
@@ -133,9 +132,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     onChanged: (value) {
                       //Do something with the user input.
                     },
-                    
                     decoration: InputDecoration(
-                      
                       labelText: "Password",
                       hintText: 'VJTI@ClAssign',
                       contentPadding: EdgeInsets.symmetric(
@@ -156,24 +153,23 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                 ),
-              
-              SizedBox(height:40.0),
-
-           ButtonTheme(
-            minWidth: 150.0,
-            height: 50.0,
-            child: RaisedButton(
-                onPressed: (){
-                  Navigator.pushNamed(context, LoginScreen.id );
-                },
-                elevation: 10.0,
-                child: Text("Login" , style:TextStyle(color: Colors.white , fontSize: 20.0) ,),
-                color: Colors.blue[700],
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0))
+                SizedBox(height: 40.0),
+                ButtonTheme(
+                  minWidth: 150.0,
+                  height: 50.0,
+                  child: RaisedButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, LoginScreen.id);
+                      },
+                      elevation: 10.0,
+                      child: Text(
+                        "Login",
+                        style: TextStyle(color: Colors.white, fontSize: 20.0),
+                      ),
+                      color: Colors.blue[700],
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0))),
                 ),
-            ),
-              
-              
               ],
             )
           ],
