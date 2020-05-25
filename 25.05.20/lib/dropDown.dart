@@ -1,8 +1,7 @@
-import 'package:dicee/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'Subjects.dart';
-import 'constants.dart';
+
 import 'setPassword.dart';
 
 String batchu = 'One', semu = 'One';
@@ -47,7 +46,7 @@ class _DdBatchSemState extends State<DdBatchSem> {
               color: Color(0xffE7F1FA),
             ),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 Text(
                   'Batch',
@@ -116,7 +115,7 @@ class _DdBatchSemState extends State<DdBatchSem> {
               color: Color(0xffE7F1FA),
             ),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 Text(
                   'Semester',
@@ -193,7 +192,7 @@ class _DdBatchSemState extends State<DdBatchSem> {
               child: Center(
                 child: Text(
                   'Continue',
-                  style: TextStyle(fontSize: 25.0, fontFamily: 'NotoSansKR'),
+                  style: TextStyle(fontSize: 25.0, fontFamily: 'Bitter'),
                 ),
               ),
             ),
@@ -206,7 +205,7 @@ class _DdBatchSemState extends State<DdBatchSem> {
               );
             },
             child: Container(
-              height: 20.0,
+              height: 25.0,
               width: 120.0,
               decoration: BoxDecoration(
                 boxShadow: [
@@ -225,6 +224,9 @@ class _DdBatchSemState extends State<DdBatchSem> {
               child: Center(
                 child: Text(
                   'Set Password',
+                  style: TextStyle(
+                    fontFamily: 'Bitter'
+                  ),
                 ),
               ),
             ),

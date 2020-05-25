@@ -171,7 +171,7 @@ class _SetPasswordState extends State<SetPassword> {
                     child: Center(
                       child: Text(
                         'Continue',
-                        style: TextStyle(fontSize: 35.0,fontFamily: 'SF Pro Display',),
+                        style: TextStyle(fontSize: 30.0,fontFamily: 'NotoSansKR',),
                       ),
                     ),
                   ),

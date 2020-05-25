@@ -17,7 +17,7 @@ FlatButton listTileMaker(String subName, String part, [Icon myicon]) {
         borderRadius: BorderRadius.all(
           Radius.circular(130.0),
         ),
-        color: Color(0xffE7F1FA),
+        color: Color(0xFFDFE6E9),
       ),
       child: ListTile(
           leading: myicon,
