@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dropDown.dart';
-import 'subjectProvider.dart';
-
+import 'subject_decider.dart';
 
 class Subjects extends StatelessWidget {
 
@@ -11,7 +10,7 @@ class Subjects extends StatelessWidget {
 
     return Scaffold(
       body:
-        SafeArea(child: subjectProvider(batchu, semu ))
+        SafeArea(child: subjectDecider(batchu, semu ))
     );
   }
 }
