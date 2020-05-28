@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "91955909247",
+    "firebase_url": "https://classign-d8785.firebaseio.com",
+    "project_id": "classign-d8785",
+    "storage_bucket": "classign-d8785.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:91955909247:android:b08999089bd721c213654a",
+        "android_client_info": {
+          "package_name": "com.classign"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "91955909247-mjk38ciqel6onong5bbdu7tp2sp31mjd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAz9oIZO_bLWW6bMEJu4HJTBHmHikKGT1M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "91955909247-mjk38ciqel6onong5bbdu7tp2sp31mjd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
