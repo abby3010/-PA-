@@ -1,0 +1,23 @@
+1.Documentation Compulsory for every screen including 
+2.Convention for naming variables: camelCase with first word in all small letters and from second word onwards first letter capitlized.(Except classes)
+3.Unneccesary creation of variables should be avoided.
+
+Login required credentials:
+	id no
+	password
+
+Sign Up credentials:
+	1.id no
+	  name
+	  phone no
+	2.OTP Screeen
+	3.Verification Successful
+	  and password
+
+Update Profile Screen
+	Select Batch
+	Select Semester
+
+Subjects Screen
+	
+  
