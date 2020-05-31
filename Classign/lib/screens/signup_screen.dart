@@ -1,3 +1,4 @@
+import 'package:Classign/screens/otp_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:wave/wave.dart';
 import 'package:wave/config.dart';
@@ -252,7 +253,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       height: 50.0,
                       child: RaisedButton(
                           onPressed: () {
-                            Navigator.pushNamed(context, SignUpScreen.id);
+                            Navigator.pushNamed(context, PinCodeVerificationScreen.id);
                           },
                           elevation: 10.0,
                           child: Text(
