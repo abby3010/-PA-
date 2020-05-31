@@ -226,7 +226,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.4.0"
-<<<<<<< HEAD
   pin_code_fields:
     dependency: "direct main"
     description:
@@ -234,7 +233,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.0.1"
-=======
   plugin_platform_interface:
     dependency: transitive
     description:
@@ -242,7 +240,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.2"
->>>>>>> ccb7c9147c832ed1d2d802364364611d21e42b30
   quiver:
     dependency: transitive
     description:
