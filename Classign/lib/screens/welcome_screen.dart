@@ -13,6 +13,7 @@ class WelcomeScreen extends StatelessWidget {
         decoration: BoxDecoration(
             image: DecorationImage(
                 image: AssetImage('images/lines2.jpg'),
+                fit: BoxFit.cover,
                 alignment: Alignment.topCenter)),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -30,9 +31,10 @@ class WelcomeScreen extends StatelessWidget {
                 Text(
                   "lAssign",
                   style: TextStyle(
-                      color: Color(0xFF111111),
-                      fontSize: 50.0,
-                      fontFamily: 'SpecialElite',),
+                    color: Color(0xFF111111),
+                    fontSize: 50.0,
+                    fontFamily: 'SpecialElite',
+                  ),
                 ),
               ],
             ),
@@ -82,4 +84,3 @@ class WelcomeScreen extends StatelessWidget {
     );
   }
 }
-

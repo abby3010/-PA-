@@ -3,7 +3,7 @@ import 'package:Classign/screens/otp_screen.dart';
 import 'package:Classign/screens/signup_screen.dart';
 import 'package:Classign/screens/login_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:Classign/screens/dropDown.dart';
+import 'package:Classign/screens/update_screen.dart';
 import 'screens/welcome_screen.dart';
 import 'screens/constants.dart';
 import 'package:Classign/screens/subjects.dart';
