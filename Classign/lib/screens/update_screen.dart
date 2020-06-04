@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'login_screen.dart';
 
-String batchu = 'One', semu = 'One';
+String batchu = 'I', semu = 'I';
 
 class DdBatchSem extends StatefulWidget {
   static const String id = "update_screen";
@@ -12,8 +12,8 @@ class DdBatchSem extends StatefulWidget {
 }
 
 class _DdBatchSemState extends State<DdBatchSem> {
-  String batchNumber = 'One';
-  String semNumber = 'One';
+  String batchNumber = 'I';
+  String semNumber = 'I';
 
   @override
   Widget build(BuildContext context) {
@@ -87,12 +87,12 @@ class _DdBatchSemState extends State<DdBatchSem> {
                         );
                       },
                       items: <String>[
-                        'One',
-                        'Two',  
-                        'Three',
-                        'Four',
-                        'Five',
-                        'Six'
+                        'I',
+                        'II',  
+                        'III',
+                        'IV',
+                        'V',
+                        'VI'
                       ].map<DropdownMenuItem<String>>((String value1) {
                         return DropdownMenuItem<String>(
                           value: value1,
@@ -165,7 +165,7 @@ class _DdBatchSemState extends State<DdBatchSem> {
                           },
                         );
                       },
-                      items: <String>['One', 'Two']
+                      items: <String>['I', 'II']
                           .map<DropdownMenuItem<String>>((String value1) {
                         return DropdownMenuItem<String>(
                           value: value1,
@@ -189,12 +189,6 @@ class _DdBatchSemState extends State<DdBatchSem> {
             ),
             FlatButton(
               onPressed: () {
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(
-                //     builder: (context) => Subjects(),
-                //   ),
-                // );
                 Navigator.pushNamed(context, LoginScreen.id);
               },
               child: Container(
@@ -222,38 +216,6 @@ class _DdBatchSemState extends State<DdBatchSem> {
                 ),
               ),
             ),
-            // FlatButton(
-            //   onPressed: () {
-            //     // Navigator.push(
-            //     //   context,
-            //     //   MaterialPageRoute(builder: (context) => SetPassword()),
-            //     // );
-            //   },
-              // child: Container(
-              //   height: 25.0,
-              //   width: 120.0,
-              //   decoration: BoxDecoration(
-              //     boxShadow: [
-              //       BoxShadow(
-              //         color: Colors.grey.withOpacity(0.5),
-              //         spreadRadius: 5,
-              //         blurRadius: 7,
-              //         offset: Offset(0, 3), // changes position of shadow
-              //       ),
-              //     ],
-              //     borderRadius: BorderRadius.all(
-              //       Radius.circular(130.0),
-              //     ),
-              //     color: Color(0xffE7F1FA),
-              //   ),
-              //   child: Center(
-              //     child: Text(
-              //       'Set Password',
-              //       style: TextStyle(fontFamily: 'Bitter'),
-              //     ),
-              //   ),
-              // ),
-            // )
           ],
         ),
       ),

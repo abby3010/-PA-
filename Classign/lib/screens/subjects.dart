@@ -13,14 +13,14 @@ class Subjects extends StatelessWidget {
 
 // ignore: missing_return
 Container subjectDecider(String batch, String sem) {
-  if ((batch == 'One' || batch == 'Two' || batch == 'Three') && sem == 'One')
+  if ((batch == 'I' || batch == 'II' || batch == 'III') && sem == 'I')
     return listTile123sem1();
-  else if ((batch == 'Four' || batch == 'Five' || batch == 'Six') &&
-      sem == 'One')
+  else if ((batch == 'IV' || batch == 'V' || batch == 'VI') &&
+      sem == 'I')
     return listTile456sem1();
-  else if ((batch == 'One' || batch == 'Two' || batch == 'Three') &&
-      sem == 'Two')
+  else if ((batch == 'I' || batch == 'II' || batch == 'III') &&
+      sem == 'II')
     return listTile123sem2();
-  else if ((batch == 'Four' || batch == 'Five' || batch == 'Six') &&
-      sem == 'Two') return listTile456sem2();
+  else if ((batch == 'IV' || batch == 'V' || batch == 'VI') &&
+      sem == 'II') return listTile456sem2();
 }

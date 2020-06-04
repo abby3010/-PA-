@@ -12,175 +12,114 @@ class SetPassword extends StatefulWidget {
 class _SetPasswordState extends State<SetPassword> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Color(0xFFDFE6E9),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    return Scaffold(
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("images/lines3.jpg"),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Center(
+            Flexible(
               child: Text(
-                'Set your password',
+                'Set\nPassword',
+                textAlign: TextAlign.center,
                 style: TextStyle(
                     fontSize: 45.0,
                     fontWeight: FontWeight.bold,
                     fontFamily: 'CabinSketch'),
               ),
             ),
-            Column(
-              children: <Widget>[
-                Row(
-                  children: <Widget>[
-                    SizedBox(
-                      width: 35.0,
-                    ),
-                    Text(
-                      'Type a password',
-                      textAlign: (TextAlign.start),
-                      style: TextStyle(fontSize: 30.0, fontFamily: 'Bitter'),
-                    ),
-                  ],
+            SizedBox(height: 40.0),
+            Padding(
+              padding: EdgeInsets.only(
+                left: 25.0,
+                right: 25.0,
+              ),
+              child: TextField(
+                obscureText: true,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 16.0,
+                  color: Colors.black,
                 ),
-                SizedBox(
-                  height: 15.0,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: <Widget>[
-                    SizedBox(
-                      width: 35.0,
-                    ),
-                    Container(decoration: BoxDecoration(    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
-                        spreadRadius: 5,
-                        blurRadius: 7,
-                        offset: Offset(0, 3), // changes position of shadow
-                      ),
-                    ],
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(130.0),
-                      ),
-                      color: Color(0xffE7F1FA),
-                    ),
-                      width: 300.0,
-                      child: TextField(
-                        autocorrect: true,
-                        decoration: InputDecoration(
-                          hintText: 'Password ( 8 Characters minimum)',
-                          hintStyle: TextStyle(color: Colors.grey),
-                          filled: true,
-                          fillColor: Colors.white70,
-                          enabledBorder: OutlineInputBorder(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(15.0)),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(10.0)),
-                            borderSide: BorderSide(color: Color(0xffD2CAC8)),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 30.0,
-                ),
-                Row(
-                  children: <Widget>[
-                    SizedBox(
-                      width: 35.0,
-                    ),
-                    Text(
-                      'Confirm password',
-                      textAlign: (TextAlign.start),
-                      style: TextStyle(fontSize: 30.0, fontFamily: 'Bitter'),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 15.0,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: <Widget>[
-                    SizedBox(
-                      width: 35.0,
-                    ),
-                    Container(decoration: BoxDecoration(    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
-                        spreadRadius: 5,
-                        blurRadius: 7,
-                        offset: Offset(0, 3), // changes position of shadow
-                      ),
-                    ],
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(130.0),
-                      ),
-                      color: Color(0xffE7F1FA),
-                    ),
-                      width: 300.0,
-                      child: TextField(
-                        autocorrect: true,
-                        decoration: InputDecoration(
-                          hintText: 'Retype password',
-                          hintStyle: TextStyle(color: Colors.grey),
-                          filled: true,
-                          fillColor: Colors.white70,
-                          enabledBorder: OutlineInputBorder(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(15.0)),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(10.0)),
-                            borderSide: BorderSide(color: Color(0xffD2CAC8)),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 80.0,
-                ),
-                FlatButton(
-                  onPressed: () {
-//                    Navigator.push(
-//                      context,
-//                      MaterialPageRoute(builder: (context) => ()),
-//                    );
-                      Navigator.pushNamed(context, DdBatchSem.id);
-                  },
-                  child: Container(
-                    height: 60.0,
-                    width: 170.0,
-                    decoration: BoxDecoration(    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
-                        spreadRadius: 5,
-                        blurRadius: 7,
-                        offset: Offset(0, 3), // changes position of shadow
-                      ),
-                    ],
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(130.0),
-                      ),
-                      color: Color(0xffE7F1FA),
-                    ),
-                    child: Center(
-                      child: Text(
-                        'Continue',
-                        style: TextStyle(fontSize: 30.0,fontFamily: 'NotoSansKR',),
-                      ),
-                    ),
+                onChanged: (value) {
+                  //Do something with the user input.
+                },
+                decoration: InputDecoration(
+                  labelText: "Password",
+                  hintStyle: TextStyle(color: Colors.black),
+                  hintText: 'Password( 8 characters minimum)',
+                  contentPadding:
+                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(32.0)),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.grey, width: 1.5),
+                    borderRadius: BorderRadius.all(Radius.circular(32.0)),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.grey, width: 2.0),
+                    borderRadius: BorderRadius.all(Radius.circular(32.0)),
                   ),
                 ),
-              ],
+              ),
+            ),
+            SizedBox(height: 30.0),
+            Padding(
+              padding: EdgeInsets.only(
+                left: 25.0,
+                right: 25.0,
+              ),
+              child: TextField(
+                obscureText: true,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 16.0,
+                ),
+                onChanged: (value) {
+                  //Do something with the user input.
+                },
+                decoration: InputDecoration(
+                  labelText: "Confirm Password",
+                  hintStyle: TextStyle(color: Colors.black),
+                  hintText: 'VJTI@ClAssign',
+                  contentPadding:
+                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(32.0)),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.grey, width: 1.5),
+                    borderRadius: BorderRadius.all(Radius.circular(32.0)),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.grey, width: 2.0),
+                    borderRadius: BorderRadius.all(Radius.circular(32.0)),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(height: 30.0),
+            ButtonTheme(
+              minWidth: 150.0,
+              height: 50.0,
+              child: RaisedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, DdBatchSem.id);
+                  },
+                  elevation: 10.0,
+                  child: Text(
+                    "Confirm",
+                    style: TextStyle(color: Colors.white, fontSize: 20.0),
+                  ),
+                  color: Color(0xFF333333),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30.0))),
             ),
           ],
         ),

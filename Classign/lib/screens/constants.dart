@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 final ThemeData defaultTheme = ThemeData(
-  primaryColor: Colors.purple,
+  primaryColor: Colors.black,
   brightness: Brightness.light,
   primaryColorBrightness: Brightness.light,
-  accentColor: Colors.purple[500],
+  accentColor: Colors.grey[750],
   accentColorBrightness: Brightness.light
 );
 

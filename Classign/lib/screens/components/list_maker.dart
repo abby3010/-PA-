@@ -7,7 +7,7 @@ Container listTile123sem1() {
   return Container(
     decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage('images/lines1.jpg'),
+            image: AssetImage('images/lines4.jpg'),
             fit: BoxFit.cover,
             alignment: Alignment.topCenter)),
     child: ListView(children: <Widget>[
@@ -98,7 +98,7 @@ Container listTile456sem1() {
   return Container(
     decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage('images/lines1.jpg'),
+            image: AssetImage('images/lines4.jpg'),
             fit: BoxFit.cover,
             alignment: Alignment.topCenter)),
     child: ListView(
@@ -197,7 +197,7 @@ Container listTile123sem2() {
   return Container(
     decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage('images/lines1.jpg'),
+            image: AssetImage('images/lines4.jpg'),
             fit: BoxFit.cover,
             alignment: Alignment.topCenter)),
     child: ListView(
@@ -296,7 +296,7 @@ Container listTile456sem2() {
   return Container(
     decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage('images/lines1.jpg'),
+            image: AssetImage('images/lines4.jpg'),
             fit: BoxFit.cover,
             alignment: Alignment.topCenter)),
     child: ListView(
