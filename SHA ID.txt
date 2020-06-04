@@ -1,0 +1,36 @@
+jre\bin\keytool -genkey -v -keystore c:\Users\Arvind\key.jks -storetype JKS -keyalg RSA -keysize 2048 -validity 10000 -alias key
+keytool -exportcert -list -v \ -alias key -keystore c:\Users\Arvind
+C:\Users\Arvind>keytool -exportcert -list -v -alias key -keystore c:\Users\Arvind\key.jks
+Enter keystore password:
+Alias name: key
+Creation date: 31 May, 2020
+Entry type: PrivateKeyEntry
+Certificate chain length: 1
+Certificate[1]:
+Owner: CN=Arvind, OU=Unknown, O=Unknown, L=Unknown, ST=Unknown, C=Unknown
+Issuer: CN=Arvind, OU=Unknown, O=Unknown, L=Unknown, ST=Unknown, C=Unknown
+Serial number: 6d5099be
+Valid from: Sun May 31 15:39:06 IST 2020 until: Thu Oct 17 15:39:06 IST 2047
+Certificate fingerprints:
+         MD5:  FD:84:A8:1D:4F:F5:1A:78:F2:D4:D0:2B:7F:7A:E0:10
+         SHA1: 2A:00:DA:12:C1:20:39:6D:F0:E4:C0:60:0F:FD:67:D8:AB:1F:45:8C
+         SHA256: A0:2C:AB:F4:39:C6:44:E0:AB:B3:67:E9:B7:4C:E9:8B:16:79:05:D3:3F:E9:E7:79:09:D5:9D:AF:14:87:30:F5
+Signature algorithm name: SHA256withRSA
+Subject Public Key Algorithm: 2048-bit RSA key
+Version: 3
+
+Extensions:
+
+#1: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: 66 36 97 17 F4 6B BC 13   3E 8C 58 2D F5 29 32 66  f6...k..>.X-.)2f
+0010: F1 F7 3E E7                                        ..>.
+]
+]
+
+
+Warning:
+The JKS keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore c:\Users\Arvind\key.jks -destkeystore c:\Users\Arvind\key.jks -deststoretype pkcs12".
+
+C:\Users\Arvind>

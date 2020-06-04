@@ -1,6 +1,6 @@
-import 'package:Classign/screens/signup_screen.dart';
 import 'package:flutter/material.dart';
-import 'login_screen.dart';
+import 'package:Classign/screens/login_screen.dart';
+import 'package:Classign/screens/signup_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   static const String id = "welcome_screen";
@@ -8,9 +8,12 @@ class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFE6E2E1),
+      backgroundColor: Colors.white,
       body: Container(
-        decoration: BoxDecoration(),
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage('images/lines2.jpg'),
+                alignment: Alignment.topCenter)),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -21,25 +24,20 @@ class WelcomeScreen extends StatelessWidget {
                   tag: 'logo',
                   child: Container(
                     child: Image.asset('images/114.png'),
+                    height: 120.0,
                   ),
                 ),
                 Text(
                   "lAssign",
                   style: TextStyle(
-                      color: Colors.black,
+                      color: Color(0xFF111111),
                       fontSize: 50.0,
-                      fontFamily: 'SpecialElite'),
+                      fontFamily: 'SpecialElite',),
                 ),
               ],
             ),
 
-            Image(
-              width: 600,
-              height: 250,
-              image: AssetImage('images/welcome.png'),
-            ),
-
-            SizedBox(height: 40.0),
+            SizedBox(height: 100.0),
 
             ButtonTheme(
               minWidth: 150.0,
@@ -53,7 +51,7 @@ class WelcomeScreen extends StatelessWidget {
                     "Login",
                     style: TextStyle(color: Colors.white, fontSize: 20.0),
                   ),
-                  color: Colors.blue[700],
+                  color: Color(0xFF3c3c3c),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30.0))),
             ),
@@ -72,7 +70,7 @@ class WelcomeScreen extends StatelessWidget {
                     "Sign Up",
                     style: TextStyle(color: Colors.white, fontSize: 20.0),
                   ),
-                  color: Colors.blue[700],
+                  color: Color(0xFF3c3c3c),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30.0))),
             ),
@@ -84,3 +82,4 @@ class WelcomeScreen extends StatelessWidget {
     );
   }
 }
+
