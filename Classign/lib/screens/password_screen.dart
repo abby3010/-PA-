@@ -1,7 +1,10 @@
+import 'package:Classign/screens/dropDown.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SetPassword extends StatefulWidget {
+  static const String id = "password_screen";
+
   @override
   _SetPasswordState createState() => _SetPasswordState();
 }
@@ -151,6 +154,7 @@ class _SetPasswordState extends State<SetPassword> {
 //                      context,
 //                      MaterialPageRoute(builder: (context) => ()),
 //                    );
+                      Navigator.pushNamed(context, DdBatchSem.id);
                   },
                   child: Container(
                     height: 60.0,

@@ -1,5 +1,6 @@
 
 import 'dart:async';
+import 'package:Classign/screens/password_screen.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
@@ -177,10 +178,11 @@ class _PinCodeVerificationScreenState extends State<PinCodeVerificationScreen> {
                       } else {
                         setState(() {
                           hasError = false;
-                          scaffoldKey.currentState.showSnackBar(SnackBar(
-                            content: Text("Aye!!"),
-                            duration: Duration(seconds: 2),
-                          ));
+                          // scaffoldKey.currentState.showSnackBar(SnackBar(
+                          //   content: Text("Aye!!"),
+                          //   duration: Duration(seconds: 2),
+                          // ));
+                          Navigator.pushNamed(context, SetPassword.id);
                         });
                       }
                     },

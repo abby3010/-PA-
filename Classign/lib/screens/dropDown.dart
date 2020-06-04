@@ -1,12 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'subjects.dart';
-
-import 'set_password.dart';
+import 'login_screen.dart';
 
 String batchu = 'One', semu = 'One';
 
 class DdBatchSem extends StatefulWidget {
+  static const String id = "update_screen";
+
   @override
   _DdBatchSemState createState() => _DdBatchSemState();
 }
@@ -21,7 +21,7 @@ class _DdBatchSemState extends State<DdBatchSem> {
       decoration: BoxDecoration(
         color: Colors.white,
         image: DecorationImage(
-          image: AssetImage('images/lines5.jpg'),
+          image: AssetImage('images/lines2.jpg'),
         ),
       ),
 
@@ -187,12 +187,13 @@ class _DdBatchSemState extends State<DdBatchSem> {
           ),
           FlatButton(
             onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => Subjects(),
-                ),
-              );
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(
+              //     builder: (context) => Subjects(),
+              //   ),
+              // );
+              Navigator.pushNamed(context, LoginScreen.id);
             },
             child: Container(
               width: 200.0,
@@ -219,38 +220,38 @@ class _DdBatchSemState extends State<DdBatchSem> {
               ),
             ),
           ),
-          FlatButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => SetPassword()),
-              );
-            },
-            child: Container(
-              height: 25.0,
-              width: 120.0,
-              decoration: BoxDecoration(
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.5),
-                    spreadRadius: 5,
-                    blurRadius: 7,
-                    offset: Offset(0, 3), // changes position of shadow
-                  ),
-                ],
-                borderRadius: BorderRadius.all(
-                  Radius.circular(130.0),
-                ),
-                color: Color(0xffE7F1FA),
-              ),
-              child: Center(
-                child: Text(
-                  'Set Password',
-                  style: TextStyle(fontFamily: 'Bitter'),
-                ),
-              ),
-            ),
-          )
+          // FlatButton(
+          //   onPressed: () {
+          //     // Navigator.push(
+          //     //   context,
+          //     //   MaterialPageRoute(builder: (context) => SetPassword()),
+          //     // );
+          //   },
+            // child: Container(
+            //   height: 25.0,
+            //   width: 120.0,
+            //   decoration: BoxDecoration(
+            //     boxShadow: [
+            //       BoxShadow(
+            //         color: Colors.grey.withOpacity(0.5),
+            //         spreadRadius: 5,
+            //         blurRadius: 7,
+            //         offset: Offset(0, 3), // changes position of shadow
+            //       ),
+            //     ],
+            //     borderRadius: BorderRadius.all(
+            //       Radius.circular(130.0),
+            //     ),
+            //     color: Color(0xffE7F1FA),
+            //   ),
+            //   child: Center(
+            //     child: Text(
+            //       'Set Password',
+            //       style: TextStyle(fontFamily: 'Bitter'),
+            //     ),
+            //   ),
+            // ),
+          // )
         ],
       ),
     );
