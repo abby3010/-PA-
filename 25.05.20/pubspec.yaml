@@ -1,0 +1,46 @@
+name: dicee
+description: A new Flutter application.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^0.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+  - images/
+  fonts:
+    - family: CabinSketch
+      fonts:
+        - asset: fonts/CabinSketch-Bold.ttf
+
+    - family: NotoSansKR
+      fonts:
+        - asset: fonts/NotoSansKR-Bold.otf
+
+    - family: Anton
+      fonts:
+        - asset: fonts/Anton-Regular.ttf
+
+    - family: Bitter
+      fonts:
+        - asset: fonts/Bitter-Bold.ttf
+    - family: Jost
+      fonts:
+        - asset: fonts/Jost-ExtraBoldItalic.ttf
+    - family: SF Pro Display
+      fonts:
+        - asset: fonts/FontsFree-Net-SFProDisplay-Regular.ttf
